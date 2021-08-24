@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Urbanist&display=swap");
+:root {
+  --clr-1: #02394a;
+  --clr-2: #f8733a;
+  --clr-3: #fcc8b2;
+  --clr-4: #885053;
+  --clr-5: #4f8784;
+
+  --font-family-1: "Urbanist", sans-serif;
+  --font-family-2: "Quicksand", sans-serif;
+}
+/*===============
+General Layout
+================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 241, 246, 1) 0%,
+    rgba(171, 211, 238, 1) 50%,
+    rgba(137, 195, 235, 1) 51%,
+    rgba(213, 235, 251, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
+.brochure-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  height: 100%;
+}
+
+/*===============
+Front of Brochure
+================*/
+/* All 3 Columns Front */
+.front-side > div {
+  height: 640px;
+}
+/************Individual Columns***********/
+/*===============
+Column One
+================*/
+#one {
+  /* display: none; */
+  background-image: url(./images/mainImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#one h1 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  text-transform: uppercase;
+  width: 220px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-align: right;
+  color: white;
+  font-family: var(--font-family-1);
+}
+#one h1 span {
+  color: var(--clr-4);
+  letter-spacing: 20px;
+}
+/*===============
+Column Two
+================*/
+#two {
+  /* display: none; */
+  background-color: var(--clr-1);
+  color: whitesmoke;
+}
+.page-two-header {
+  width: 240px;
+  padding: 50px 30px;
+}
+.page-two-header h2 {
+  font-size: 30px;
+  width: 100%;
+  font-family: var(--font-family-1);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.page-two-header p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: var(--font-family-2);
+}
+/* Contact Information Section */
+.page-two-content {
+  border: 4px solid var(--clr-4);
+  border-width: 4px 0;
+  border-radius: 4px;
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+/* All information Rows */
+.page-two-content div {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-2);
+}
+/* Icons */
+.page-two-content span {
+  color: var(--clr-4);
+  font-size: 30px;
+  padding-right: 20px;
+}
+.contact-row-one .links {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.links a {
+  text-decoration: none;
+  color: var(--clr-3);
+  font-weight: 100;
+  font-family: var(--font-family-2);
+  letter-spacing: 1px;
+}
+.contact-row-four .address {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  padding-left: 8px;
+}
+/*===============
+Column three
+================*/
+#three {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#three > section:first-child {
+  position: relative;
+  height: 50%;
+  background-image: url(./images/villageImg.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#three > section:first-child span {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 30px;
+  color: var(--clr-4);
+}
+.page-three-header {
+  color: whitesmoke;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.page-three-header h2 {
+  letter-spacing: 10px;
+  font-family: var(--font-family-1);
+  text-transform: uppercase;
+}
+.page-three-header p {
+  font-family: var(--font-family-2);
+  font-size: 13px;
+  font-weight: 600;
+  padding-right: 5px;
+}
+#three > section:last-child {
+  height: 50%;
+  background-color: var(--clr-3);
+  color: var(--clr-4);
+  display: grid;
+  justify-content: center;
+  border-bottom: 20px solid var(--clr-4);
+}
+.page-three-content {
+  width: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+.page-three-content h2 {
+  padding: 30px 0;
+  line-height: 32px;
+  font-family: var(--font-family-1);
+  font-size: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.page-three-content p {
+  font-weight: 700;
+  width: 150px;
+  margin: auto;
+  font-style: italic;
+  font-size: 18px;
+}
+.page-three-content p > span {
+  display: block;
+  color: var(--clr-2);
+  font-weight: 900;
+  font-size: 24px;
+}
+
+/*===============
+Back of Brochure
+================*/
+/*===============
+General Layout
+================*/
+.back-side {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--clr-1);
+}
+.bottom-half {
+  height: 100%;
+}
+.bottom-half div {
+  height: 640px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.text-container {
+  font-family: var(--font-family-2);
+  padding: 20px;
+  color: white;
+}
+.text-container > h3 {
+  font-family: var(--font-family-1);
+  text-transform: uppercase;
+}
+.text-container p {
+  padding-top: 20px;
+  font-weight: 500;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+.text-container p > span {
+  display: block;
+  padding: 20px 0;
+}
+/*===============
+Individual Columns
+================*/
+#four .text-container {
+  background-color: var(--clr-3);
+  color: black;
+}
+/* Page 1 */
+#four .text-container h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Images for top-half of backside
+    > Merge in desktop view */
+.image-container {
+  background-image: url(./images/balloonsImage.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#four .image-container {
+  background-position: left;
+}
+#five .image-container {
+  background-position: center;
+}
+#six .image-container {
+  background-position: right;
+}
+/*===============
+Minor Font changes,
+Revert back in desktop view
+***Reason for this is because in tablet it streches out,
+in desktop the brochure is 3 columns instead of horizontally stacked***
+================*/
+@media (min-width: 715px) {
+  .page-two-header {
+    width: 500px;
+  }
+  .page-three-header {
+    font-size: 30px;
+  }
+  .page-three-header p {
+    font-size: 20px;
+  }
+}
+
+/*===============
+Major Layout changes
+================*/
+@media (min-width: 1000px) {
+  /* First, Revert tablet changes back */
+  .page-two-header {
+    width: 300px;
+  }
+  .page-three-header {
+    font-size: 20px;
+  }
+  .page-three-header p {
+    font-size: 16px;
+  }
+  /*************Desktop View***************/
+  /*===============
+  Font-side
+  ================*/
+
+  .brochure-container {
+    max-width: 1200px;
+  }
+  .front-side {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #one,
+  #two,
+  #three {
+    width: 33%;
+  }
+  /*===============
+  back-side
+  ================*/
+  .back-side {
+    height: 640px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 99%;
+  }
+  .top-half {
+    background-image: url(./images/balloonsImage.jpg);
+    background-size: 100%;
+    background-position: center;
+    height: 40%;
+  }
+  .bottom-half div {
+    height: inherit;
+  }
+  .bottom-half {
+    height: 60%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #four,
+  #five,
+  #six {
+    height: 100%;
+  }
+  .text-container {
+    padding: 30px;
+  }
+  .text-container p > span {
+    padding-bottom: 0;
+  }
+  /* First Page for back-size */
+  #four .text-container {
+    background-color: var(--clr-3);
+    height: 100%;
+  }
+  #four .text-container p > span {
+    font-weight: 900;
+  }
+
+  /* Remove mobile images for backside, and merge it */
+  div .image-container {
+    display: none;
+  }
+}
